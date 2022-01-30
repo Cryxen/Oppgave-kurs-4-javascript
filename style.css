@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+article {
+    border-style: solid;
+    border-radius: 25px;
+    box-shadow: 5px 5px;
+    margin: 20px;
+}
