@@ -1,17 +1,24 @@
-// Hente ut paragraf som vi ønsker å sjekke.
-const paragraphToCheck = document.getElementById("paragraphToCheck").innerHTML.trim()
-// Legge paragrafen til en array for videre behandling 
-const paragraphArray = paragraphToCheck.split(' ')
+//import "./styles.css";
 
-//Lage en variabel som kan holde på lengste ord
-let longestWord = ""
+// Statisk tekst som brukes til å søke i
+const text =
+  "Baby cliche unicorn brooklyn farm-to-table. Salvia semiotics hella literally paleo humblebrag bushwick letterpress messenger bag pork belly brooklyn authentic vexillologist. Gastropub sustainable banjo, shaman snackwave viral air plant ramps health goth. Edison bulb vegan microdosing, tote bag unicorn skateboard disrupt copper mug four loko sustainable whatever cloud bread slow-carb lumbersexual four dollar toast. Waistcoat lomo hammock vape shabby chic sartorial yr godard pok pok fashion axe organic migas. Quinoa yr vexillologist intelligentsia verylongwordthatislong neutra mixtape YOLO XOXO listicle letterpress farm-to-table beard.";
 
-//foEach går igjennom hver index i array. Her ser vi etter det lengste ordet, og legger den til i variabelen longestWord
-paragraphArray.forEach(element => {
+const longestWord = (insertText) => {
+
+
+  // TODO: Gjør om text til array eks. ['Baby', 'cliche']
+  let textArray = insertText.split(' ');
+  let longestWord = "";
+  // TODO: Velg første ord så du har noe å sammenlikne med
+  // TODO: Gå igjennom alle ordene og oppdater hvis nytt ord er lengre
+  textArray.forEach(element => {
     if (element.length > longestWord.length) {
-        element = element.replace('"', '')
-        longestWord = element
+        element = element.replace('"', '');
+        longestWord = element;
     }
-});
-//Printer ut longestWord i paragraf med id "longest word"
-document.getElementById("longest_word").innerHTML = longestWord
+}
+);
+return longestWord;
+};
+console.log(longestWord(text));

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="nb">
-    <head>
-        <title>Oppgave 2</title>
-        <meta charset = "utf-8" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-    </head>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
 
-    <body>
-        <header>
-            <h1>Oppgave 2 - Liste med brukere</h1>
-        </header>
-        <article>
-            <h2>Brukere</h2>
-            <button id="sortByAge">Sorter på alder</button>
-            <button id="sortByName">Sorter på navn</button>
-            <p id="nameList"></p>
-        </article>
-    <script type="text/javascript" src="oppgave2.js"></script>
-    </body>
+  <body>
+    <main id="main">
+      <div id="nameWrapper">
+        <label for="name">Søk etter navn</label>
+        <input id="name" type="search" placeholder="Søk etter navn" />
+      </div>
+      <br />
+      <div id="ageWrapper">
+        <label for="age">Filter etter alder</label>
+        <input id="age" type="text" placeholder="Sett minimumsalder" />
+        <button id="filter" type="button">Filter</button>
+      </div>
+      <ul id="users"></ul>
+    </main>
+
+    <script src="oppgave2.js"></script>
+  </body>
 </html>
